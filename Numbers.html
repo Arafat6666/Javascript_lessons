@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Numbers</h1>
+        <p id="num"></p>
+
+        <script>
+            //numbers that can be written with or without decimals 
+          /*  let x = 123;
+            let y = 123.45;
+
+            document.getElementById("num").innerHTML = x + "<br>" + y;*/
+
+        // lets explore some of the instance methods of numbers
+        let x = 9.656;
+        //document.getElementById("num").innerHTML=x.toString(30);
+       //console.log(typeof x.toString());
+
+
+       //lets try to use precision method
+       //document.getElementById("num").innerHTML = x.toPrecision(2);
+
+       //lets see the value of 
+         document.getElementById("num").innerHTML = x.valueOf();
+         console.log(x.valueOf());
+         console.log(typeof x.valueOf());
+
+
+         /*Number.isInteger() – checks if a value is a whole number
+        Number.isFinite() – checks that a value isn't Infinity or NaN
+        Number.isNaN() – the reliable way to check for NaN (unlike == comparison)
+        Number.isSafeInteger() – checks if a number falls within the safe integer range (±2⁵³ − 1)
+        Number.parseInt() / Number.parseFloat() – same as the global versions, just namespaced for modularity*/
+
+
+
+
+        //bigInt is a built-in object that provides a way to represent whole numbers larger than 2^53 - 1, which is the largest number JavaScript can reliably represent with the Number type. BigInt can be created by appending "n" to the end of an integer or by using the BigInt() constructor.
+        let bigInt1 = 1234567890123456789012345678901234567890n;
+        let bigInt2 = BigInt("1234567890123456789012345678901234567890");    
+        document.getElementById("num").innerHTML = bigInt1 + "<br>" + bigInt2;
+        </script>
